@@ -6,9 +6,11 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID ?? '',
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
-      callbackUrl: process.env.NEXTAUTH_URL + '/api/auth/callback/google',
+      callbackUrl : process.env.NEXTAUTH_URL ?? '',
+    
     }),
     // Add other providers as needed
+    
   ],
   // Add custom configurations if necessary
 });
